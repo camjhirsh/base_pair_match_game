@@ -1,7 +1,7 @@
 #Imports 
 import pygame
 
-#Initialize
+#Initialize Game
 pygame.init()
 
 #Colors
@@ -11,7 +11,7 @@ GREEN = (0, 255, 0)
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 
-#Variables
+#Global Variables
 SCREEN_WIDTH = 1000
 SCREEN_HEIGHT = 400
 SCORE = 0
@@ -21,8 +21,7 @@ DISPLAY_SURF = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 DISPLAY_SURF.fill(WHITE)
 pygame.display.set_caption("CAM'S SUPER COOL GAME 1111!!!!")
 
-#
-clock = pygame.time.Clock()
+#Display C
 letter_c = pygame.image.load('C.png')
 mistake = False
 
@@ -33,14 +32,7 @@ x =  (SCREEN_WIDTH * 0.5)
 y = (SCREEN_HEIGHT * 0.5)
 
 while not mistake:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            mistake = True
 
     display_letter(letter_c, x, y)
     pygame.display.update()
-    clock.tick(60)
-
-pygame.quit()
-quit()
 
